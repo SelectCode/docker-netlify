@@ -2,3 +2,7 @@
 FROM node:10.6-alpine
 
 RUN npm install netlify-cli -g
+
+# Add git
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
